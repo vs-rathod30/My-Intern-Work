@@ -64,47 +64,47 @@ Date: From --- 01/02/2019   To --- 19/04/2014
 
 ⦁	Module
    
-  	 ⦁	As namespace
+  	 ⦁ As namespace
    
-  	 ⦁	As Mixin
+  	 ⦁ As Mixin
 
-⦁	Blocks, Proc & Lambda
+⦁ Blocks, Proc & Lambda
 
-⦁	File I/O
+⦁ File I/O
 
-⦁	OOP's Concept
+⦁ OOP's Concept
 
 
 # Rails Framework :
-⦁	MVC pattern  (Model-View-Controller)
+⦁ MVC pattern  (Model-View-Controller)
 
-⦁	Controller
+⦁ Controller
       
       ⦁	Router
       
-          ⦁	basic
+          ⦁ basic
       
-         ⦁	root
+          ⦁ root
       
-         ⦁	Resources (Nested Resources)
+          ⦁ Resources (Nested Resources)
     
     ⦁ method & action
     
-    ⦁	parameters
+    ⦁ parameters
     
-    ⦁	Filters
+    ⦁ Filters
     
-    ⦁	HTTP Basic Authentication
+    ⦁ HTTP Basic Authentication
     
-    ⦁	Streaming and File Downloads 
+    ⦁ Streaming and File Downloads 
 
-⦁	View
+⦁ View
     
-    ⦁	render
+    ⦁ render
     
-    ⦁	redirect_to
+    ⦁ redirect_to
 	
-⦁	Model
+⦁ Model
    
    ⦁ Active Record
     
@@ -126,16 +126,16 @@ Date: From --- 01/02/2019   To --- 19/04/2014
         
         ⦁ CRUD: Reading and Writing Data Create Read Update Delete 
     
-    ⦁	Validations 
+    ⦁ Validations 
   
-    ⦁	Callbacks
+    ⦁ Callbacks
     
-    ⦁	Migrations
+    ⦁ Migrations
     
-    ⦁	Associations
+    ⦁ Associations
         
-        ⦁	belongs_to
+        ⦁ belongs_to
         
-        ⦁	has_many
+        ⦁ has_many
         
-        ⦁	has_one_belongs_to_many
+        ⦁ has_one_belongs_to_many
