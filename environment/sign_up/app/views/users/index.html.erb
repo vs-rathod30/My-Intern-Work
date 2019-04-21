@@ -1,0 +1,25 @@
+<h2> User List</h2>
+<table>
+
+    <tr>
+        <th> Id</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Password</th>
+        <th></th>
+    </tr>
+
+    <% @user.each do |u| %>
+        
+    <tr>
+    <td><%= u.id %></td>
+    <td><%= u.name %></td>
+    <td><%= u.email %></td>
+    <td><%= u.password %></td>
+    <td></td>
+    </tr>
+    <% end  %>
+
+</table>
+
+
