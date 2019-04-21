@@ -1,7 +1,7 @@
 #     Vivriti Capital Private Limited
 
 # INTERN Report
-Date: From --- 01/02/2019   To --- 19/04/2014
+Date: From --- 01/02/2019   To --- 21/04/2014
 
 # prerequisite:
 ⦁	Web services
