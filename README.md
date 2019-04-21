@@ -64,9 +64,9 @@ Date: From --- 01/02/2019   To --- 19/04/2014
 
 ⦁	Module
    
-   ⦁	As namespace
+  	 ⦁	As namespace
    
-   ⦁	As Mixin
+  	 ⦁	As Mixin
 
 ⦁	Blocks, Proc & Lambda
 
