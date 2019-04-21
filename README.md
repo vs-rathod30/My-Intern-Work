@@ -30,27 +30,27 @@ Date: From --- 01/02/2019   To --- 19/04/2014
 
 
 # prerequisite for :      Ruby on Rails Language :-
-⦁	Ruby Version Manager (RVM)
+⦁ Ruby Version Manager (RVM)
 
-⦁	install ruby on rails version
+⦁ install ruby on rails version
 
-⦁	Gemset
+⦁ Gemset
 
-    ⦁	Rails
+    ⦁ Rails
     
-    ⦁	Rack
+    ⦁ Rack
     
-    ⦁	Mongoid
+    ⦁ Mongoid
     
-    ⦁	sqlite
+    ⦁ sqlite
     
-    ⦁	bundle
+    ⦁ bundle
     
-    ⦁	byebug
+    ⦁ byebug
 
-⦁	MVC pattern  (Model-View-Controller)
+⦁ MVC pattern  (Model-View-Controller)
 
-⦁	Ruby Object Model structure
+⦁ Ruby Object Model structure
 
 
 # Ruby Language :
@@ -80,7 +80,7 @@ Date: From --- 01/02/2019   To --- 19/04/2014
 
 ⦁ Controller
       
-      ⦁	Router
+    ⦁ Router
       
           ⦁ basic
       
