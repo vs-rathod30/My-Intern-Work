@@ -5,8 +5,11 @@ Date: From --- 01/02/2019   To --- 19/04/2014
 
 # prerequisite:
 ⦁	Web services
+
 ⦁	REST (REpresentational State Transfer)  /   SOAP 
+
 ⦁	Web Application
+
 ⦁	ORM (Object Relational Mapping) 
 ⦁	JSON (JavaScript Object Notation)
 ⦁	BSON (Binary JSON)
