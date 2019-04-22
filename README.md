@@ -143,3 +143,16 @@ Date:
         ⦁ has_many
         
         ⦁ has_and_belongs_to_many
+	
+# Mongoid      https://github.com/vs-rathod30/My-Intern-Work/tree/mongoid_blog
+	- CRUD Operation
+	
+	Association
+		
+		- embeds_many
+		
+		- embeds_one
+		
+	Persistence Methods
+	
+	Query
