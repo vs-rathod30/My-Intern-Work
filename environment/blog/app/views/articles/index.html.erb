@@ -1,9 +1,12 @@
 <h2> Listing articles  ||  <%= link_to 'Add article', action: 'new' %> </h2>
 
-<%= form_tag(articles_path method: :get) do %>
+<%= form_tag("articles/index", method: :get) do %>
+
     <%= text_field_tag :store, params[:store] %>
+
     <%= submit_tag 'search', name: nil %>
-<% end %>
+    
+    <% end %>
 
 <table>
     <tr>

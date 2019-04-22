@@ -4,6 +4,7 @@ class ArticlesController < ApplicationController
    before_action :show, only: [:download_pdf]
 
     def index
+        byebug
         if params[:store]
             @article = Article.find_by(title: "%#{params[:store]}")
         else

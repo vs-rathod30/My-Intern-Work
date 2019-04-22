@@ -1,24 +1,145 @@
-# README
+#     Vivriti Capital Private Limited
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# INTERN Report
+Date:    
 
-Things you may want to cover:
+    From --- 01/02/2019 
+	 
+    To ---   21/04/2019
 
-* Ruby version
+# prerequisite:
+⦁	Web services
 
-* System dependencies
+⦁	REST (REpresentational State Transfer)  /   SOAP 
 
-* Configuration
+⦁	Web Application
 
-* Database creation
+⦁	ORM (Object Relational Mapping)
 
-* Database initialization
+⦁	JSON (JavaScript Object Notation)
 
-* How to run the test suite
+⦁	BSON (Binary JSON)
 
-* Services (job queues, cache servers, search engines, etc.)
+⦁	XML (eXtensible Markup Language)
 
-* Deployment instructions
+⦁	MongoDB
 
-* ...
+⦁	HTTP Verbs
+
+⦁	Web Server / Application Server
+
+⦁	API (Application Programming Interface)
+
+⦁	Unix Basic Command
+
+
+# prerequisite for :      Ruby on Rails Language :-
+⦁ Ruby Version Manager (RVM)
+
+⦁ install ruby on rails version
+
+⦁ Gem
+
+    ⦁ Rails
+    
+    ⦁ Rack
+    
+    ⦁ Mongoid
+    
+    ⦁ sqlite
+    
+    ⦁ bundle
+    
+    ⦁ byebug
+
+⦁ MVC pattern  (Model-View-Controller)
+
+⦁ Ruby Object Model structure
+
+
+# Ruby Language :
+⦁	Basic Features
+
+⦁	Array / Hashes
+
+⦁	Symbols / String
+
+⦁	Execeptions
+
+⦁	Module
+   
+  	 ⦁ As namespace
+   
+  	 ⦁ As Mixin
+
+⦁ Blocks, Proc & Lambda
+
+⦁ File I/O
+
+⦁ OOP's Concept
+
+
+# Rails Framework :
+⦁ MVC pattern  (Model-View-Controller)
+
+⦁ Controller
+      
+    ⦁ Router
+      
+          ⦁ basic
+      
+          ⦁ root
+      
+          ⦁ Resources (Nested Resources)
+    
+    ⦁ method & action
+    
+    ⦁ parameters
+    
+    ⦁ Filters
+    
+    ⦁ HTTP Basic Authentication
+    
+    ⦁ Streaming and File Downloads 
+
+⦁ View
+    
+    ⦁ render
+    
+    ⦁ redirect_to
+	
+⦁ Model
+   
+   ⦁ Active Record
+    
+        ⦁ The Active Record Pattern 
+   
+        ⦁ Object Relational Mapping
+       
+        ⦁ Active Record as an ORM Framework
+   
+        ⦁ Convention over Configuration in Active Record
+        
+        ⦁ Naming Conventions
+        
+        ⦁ Schema Conventions 
+        
+        ⦁ Creating Active Record Models
+        
+        ⦁ Overriding the Naming Conventions 
+        
+        ⦁ CRUD: Reading and Writing Data Create Read Update Delete 
+    
+    ⦁ Validations 
+  
+    ⦁ Callbacks
+    
+    ⦁ Migrations
+    
+    ⦁ Associations
+        
+        ⦁ belongs_to
+        
+        ⦁ has_many
+        
+        ⦁ has_and_belongs_to_many
