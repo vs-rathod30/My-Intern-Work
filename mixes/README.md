@@ -142,3 +142,119 @@ In computing, a web application or web app is a client–server computer program
    obtain everyone in the 94107 zip code and assign to users variable
   
   users = Users.objects.filter(zip_code=94107)
+  
+  --------------------------------------------------------------------------------------------------------------------------------------
+ # MongoDb:
+
+	MongoDB is a document database with the scalability and flexibility that you want with the querying and indexing that you need.
+
+		⦁	MongoDB stores data in flexible, JSON-like documents, meaning fields can vary from document to document and data 
+			
+			structure can be changed over time
+
+		⦁	The document model maps to the objects in your application code, making data easy to work with
+
+		⦁	Ad hoc queries, indexing, and real time aggregation provide powerful ways to access and analyze your data
+
+		⦁	MongoDB is a distributed database at its core, so high availability, horizontal scaling, and geographic 				
+			distribution are built in and easy to use
+
+		⦁	MongoDB is free to use.
+	
+		https://www.mongodb.com/compare/mongodb-mysql
+
+		⦁	MongoDB is a non-relational database developed by MongoDB, Inc. MongoDB stores data as documents in a binary 
+		
+			representation called BSON (Binary JSON).
+		
+		⦁	Related information is stored together for fast query access through the MongoDB query language.
+
+		⦁	Fields can vary from document to document; there is no need to declare the structure of documents to the system 			
+			– documents are self-describing.
+
+		⦁	If a new field needs to be added to a document, then the field can be created without affecting all other 
+			
+			documents in the collection, without updating a central system catalog, and without taking the system offline.
+		
+		⦁	Optionally, schema validation can be used to enforce data governance controls over each collection.
+
+# why use mongodb instead of sql?
+
+	Organizations of all sizes are adopting MongoDB because it enables them to build applications faster, handle highly diverse data 	
+	types, and manage applications more efficiently at scale.
+
+	Development is simplified as MongoDB documents map naturally to modern, object-oriented programming languages. Using MongoDB 
+	
+	removes the 
+
+	complex object-relational mapping (ORM) layer that translates objects in code to relational tables. MongoDB’s flexible data 		
+	model also 
+
+	means that your database schema can evolve with business requirements.
+
+	MongoDB can also be scaled within and across multiple distributed data centers, providing new levels of availability and 		
+	scalability 
+
+	previously unachievable with relational databases like MySQL. As your deployments grow in terms of data volume and throughput, 
+	
+	MongoDB 
+
+	scales easily with no downtime, and without changing your application. In contrast, to achieve scale with MySQL often requires 
+
+	significant, custom engineering work.
+
+	Documents are flexible: Each document can store data with different attributes from other documents.
+
+	Documents are natural: Documents represent data in the same way that applications do.
+---------------------------------------------------------------------------------------------------------
+
+# JSON
+The syntax is that used in JavaScript and JSON itself stands for "JavaScript Object Notation". ... The JSON format is often used for serializing and transmitting structured data over a network connection. It is used primarily to transmit data between a server and web application, serving as an alternative to XML
+An example of where this is used is web services responses. In the 'old' days, web services used XML as their primary data format for transmitting back data, but since JSON appeared (The JSON format is specified in RFC 4627 by Douglas Crockford), it has been the preferred format because it is much more lightweight.
+⦁	JSON (JavaScript Object Notation) is a lightweight data-interchange format.
+⦁	It is easy for humans to read and write.
+⦁	It is easy for machines to parse and generate.
+⦁	It is based on a subset of the JavaScript Programming Language, Standard ECMA-262 3rd Edition - December 1999.
+⦁	JSON is a text format that is completely language independent but uses conventions that are familiar to programmers of the C-family of languages, including C, C++, C#, Java, JavaScript, Perl, Python, and many others. 
+These properties make JSON an ideal data-interchange language.
+JSON is built on two structures:
+⦁	A collection of name/value pairs. In various languages, this is realized as an object, record, struct, dictionary, hash table, keyed list, or associative array.
+⦁	An ordered list of values. In most languages, this is realized as an array, vector, list, or sequence
+
+---------------------------------------------------------------------------------------------------------
+# BSON (Binary JSON): 
+
+The Ruby BSON implementation is packaged in a separate gem with C and Java extensions for speed depending on the runtime enviroment.
+It's the binary encoding of JSON-like documents that MongoDB uses when storing documents in collections. It adds support for data types like Date and binary that aren't supported in JSON.
+In practice, you don't have to know much about BSON when working with MongoDB, you just need to use the native types of your language and the supplied types (e.g. ObjectId) of its driver when constructing documents and they will be mapped into the appropriate BSON type by the driver.
+https://stackoverflow.com/questions/12438280/what-is-bson-and-exactly-how-is-it-different-from-json
+How is it different from JSON?
+BSON is designed to be efficient in space, but in some cases is not much more efficient than JSON. In some cases BSON uses even more space than JSON. The reason for this is another of the BSON design goals: traversability. BSON adds some "extra" information to documents, like length of strings and subobjects. This makes traversal faster.
+BSON is also designed to be fast to encode and decode. For example, integers are stored as 32 (or 64) bit integers, so they don't need to be parsed to and from text. This uses more space than JSON for small integers, but is much faster to parse.
+⦁	In addition to compactness, BSON adds additional data types unavailable in JSON, notably the BinData and Date data types.
+⦁	in other word we can say  BSON is just binary JSON ( a superset of JSON with some more data types, most importantly binary byte array ).
+⦁	Mongodb using as a serialization format of JSON include with encoding format for storing and accessing documents. simply we can say BSON is a binary encoded format for JSON data.
+
+---------------------------------------------------------------------------------------------------------
+# Jbuilder :
+
+Jbuilder gives you a simple DSL (Domain Specify Language)  for declaring JSON structures that beats manipulating giant hash structures. This is particularly helpful when the generation process is fraught with conditionals and loops.
+https://github.com/rails/jbuilder
+
+
+ ---------------------------------------------------------------------------------------------------------
+
+# Object Document Mapper (ODM) :
+
+Because MongoDB is so easy to use, the basic Ruby driver can be the best solution for many applications. But if you need validations, associations, and other high-level data modeling functions, then you may need Object Document Mapper.
+In the context of a Rails application, an Object Document Mapper provides functionality equivalent to, but distinct from, ActiveRecord. Because MongoDB is a document-based database, these mappers are called Object Document Mappers (ODM) as opposed to Object Relational Mappers (ORM).
+The ODM officially supported by MongoDB is Mongoid, originally written by Durran Jordan.
+
+---------------------------------------------------------------------------------------------------------
+
+# Pundit :
+
+Pundit provides a set of helpers which guide you in leveraging regular Ruby classes and object oriented design patterns to build a simple, robust and scaleable authorization system.
+https://github.com/varvet/pundit
+
+
