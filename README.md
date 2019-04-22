@@ -1,24 +1,13 @@
-# README
+# Mongoid
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Simple CRUD operation
 
-Things you may want to cover:
+# Association
 
-* Ruby version
+  - embeds_many
+  
+  - embeds_one
+  
+# Persistence Methods
 
-* System dependencies
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
