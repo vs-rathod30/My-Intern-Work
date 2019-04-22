@@ -1,0 +1,23 @@
+<%=link_to 'Home',controller: 'users',action: :index %>
+<h2> List of all post for user </h2>
+<table>
+    <tr>
+        <td> title   </td>
+        <td> text </td>
+        <td></td>
+        <td></td>
+    </tr>
+
+
+  <tr>
+  
+  <%  @post.each do |post| %>
+   <td> <%= post.title    %></td>
+    <td><%= post.text %></td>
+    <td><%= link_to 'edit', edit_user_post_url(@user,post) %></td>
+    <td><%= link_to 'delete'  %></td>
+    </tr>
+<% end %> 
+</table>
+
+<%= link_to 'add_post', action: :new %>
