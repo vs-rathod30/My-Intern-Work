@@ -1,12 +1,9 @@
 <h2> Listing articles  ||  <%= link_to 'Add article', action: 'new' %> </h2>
 
-<%= form_tag("articles/index", method: :get) do %>
-
-    <%= text_field_tag :store, params[:store] %>
-
-    <%= submit_tag 'search', name: nil %>
-    
-    <% end %>
+<%= form_tag(articles_path, method: :get) do %>
+    <%= text_field_tag(:search , params[:search]) %>
+    <%= submit_tag ("search") %>
+<% end %>
 
 <table>
     <tr>
@@ -15,7 +12,20 @@
         <th>Text</th>
         <th></th>
     </tr>
+    <% if @articles != @ar %>
+            <tr>
+           <td><%= @articles.id%></td>
+           
+            <td><%= @articles.title %></td>
+            <td><%= @articles.text %></td>
+            <td><%= link_to 'show', article_path(@articles) %></td> 
+            <td><%= link_to 'edit', edit_article_path(@articles) %></td> 
 
+            <td><%= link_to 'download_article', articles_download_pdf_path(@articles) %></td> 
+            <td><%= link_to 'destroy', article_path(@articles), method: :delete, data: {confirm: 'are you sure?'} %></td>
+            <td> </td>
+        </tr> 
+    <% else %>
     <% @articles.each do |article| %>
         <tr>
             <td><%= article.id %></td>
@@ -28,6 +38,7 @@
             <td><%= link_to 'destroy', article_path(article), method: :delete, data: {confirm: 'are you sure?'} %></td>
             <td> </td>
         </tr>
-        <%end%>
+        <% end %>
+    <% end %>
 </table>
 

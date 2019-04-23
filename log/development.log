@@ -6661,3 +6661,599 @@ Processing by ArticlesController#index as HTML
 Completed 200 OK in 120ms (Views: 116.4ms | ActiveRecord: 0.4ms)
 
 
+Started GET "/articles" for 127.0.0.1 at 2019-04-22 18:41:16 +0530
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.5ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (42.0ms)
+Completed 200 OK in 862ms (Views: 819.0ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/articles/index?utf8=%E2%9C%93&store=ruby+on+rails" for 127.0.0.1 at 2019-04-22 18:41:26 +0530
+Processing by ArticlesController#show as HTML
+  Parameters: {"utf8"=>"✓", "store"=>"ruby on rails", "id"=>"index"}
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."title" = ? LIMIT ?[0m  [["title", "ruby on rails"], ["LIMIT", 11]]
+  Rendered articles/show.html.erb within layouts/application (36.7ms)
+Completed 500 Internal Server Error in 50ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `title' for #<Article::ActiveRecord_Relation:0x007fa8e4065010>):
+    4:     
+    5:     <strong>Title:</strong>
+    6:     
+    7:     <%= @article.title %>
+    8:     </p>
+    9: 
+   10: <p>
+  
+app/views/articles/show.html.erb:7:in `_app_views_articles_show_html_erb__1023024748499137798_70181678447300'
+Started GET "/articles" for 127.0.0.1 at 2019-04-22 18:43:41 +0530
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 124ms (Views: 121.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles/index?utf8=%E2%9C%93&store=ruby+on+rails&commit=search" for 127.0.0.1 at 2019-04-22 18:43:44 +0530
+Processing by ArticlesController#show as HTML
+  Parameters: {"utf8"=>"✓", "store"=>"ruby on rails", "commit"=>"search", "id"=>"index"}
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."title" = ? LIMIT ?[0m  [["title", "ruby on rails"], ["LIMIT", 11]]
+  Rendered articles/show.html.erb within layouts/application (33.0ms)
+Completed 500 Internal Server Error in 52ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `title' for #<Article::ActiveRecord_Relation:0x007fa8ddf6aaa8>):
+    4:     
+    5:     <strong>Title:</strong>
+    6:     
+    7:     <%= @article.title %>
+    8:     </p>
+    9: 
+   10: <p>
+  
+app/views/articles/show.html.erb:7:in `_app_views_articles_show_html_erb__1023024748499137798_70181627578500'
+Started GET "/" for ::1 at 2019-04-22 18:54:08 +0530
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 80ms (Views: 74.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles" for ::1 at 2019-04-22 18:54:12 +0530
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 105ms (Views: 102.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/articles/1" for ::1 at 2019-04-22 18:54:15 +0530
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 1]]
+  Rendered collection of comments/_comment.html.erb [2 times] (36.5ms)
+  Rendered comments/_form.html.erb (49.8ms)
+  Rendered articles/show.html.erb within layouts/application (205.0ms)
+Completed 200 OK in 308ms (Views: 294.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/articles" for ::1 at 2019-04-22 18:54:18 +0530
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (18.0ms)
+Completed 200 OK in 103ms (Views: 100.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/articles/index?utf8=%E2%9C%93&store=ruby+on+rails&commit=search" for ::1 at 2019-04-22 18:54:25 +0530
+Processing by ArticlesController#show as HTML
+  Parameters: {"utf8"=>"✓", "store"=>"ruby on rails", "commit"=>"search", "id"=>"index"}
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mArticle Load (8.7ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."title" = ? LIMIT ?[0m  [["title", "ruby on rails"], ["LIMIT", 11]]
+  Rendered articles/show.html.erb within layouts/application (35.5ms)
+Completed 500 Internal Server Error in 53ms (ActiveRecord: 8.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `title' for #<Article::ActiveRecord_Relation:0x007fa8ddb94f00>):
+    4:     
+    5:     <strong>Title:</strong>
+    6:     
+    7:     <%= @article.title %>
+    8:     </p>
+    9: 
+   10: <p>
+  
+app/views/articles/show.html.erb:7:in `_app_views_articles_show_html_erb__1023024748499137798_70181625559660'
+Started GET "/" for 127.0.0.1 at 2019-04-23 12:17:25 +0530
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (21.3ms)
+Completed 200 OK in 847ms (Views: 824.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2019-04-23 12:17:29 +0530
+Processing by ArticlesController#index as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/vijendra/Documents/intern/environment/blog/app/models/article.rb:17: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/models/article.rb:17: syntax error, unexpected end-of-input, expecting keyword_end
+app/controllers/articles_controller.rb:8:in `index'
+Started GET "/" for 127.0.0.1 at 2019-04-23 12:17:53 +0530
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 146ms (Views: 144.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-04-23 12:18:07 +0530
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 149ms (Views: 147.6ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2019-04-23 12:18:09 +0530
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (48.0ms)
+Completed 200 OK in 166ms (Views: 137.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/articles?utf8=%E2%9C%93&search=ruby+on+rails&commit=search" for 127.0.0.1 at 2019-04-23 12:18:26 +0530
+Processing by ArticlesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"ruby on rails", "commit"=>"search"}
+  [1m[36mArticle Load (0.5ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."title" = ? LIMIT ?[0m  [["title", "ruby on rails"], ["LIMIT", 1]]
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (12.4ms)
+Completed 500 Internal Server Error in 47ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    13:         <th></th>
+    14:     </tr>
+    15: 
+    16:     <% @articles.each do |article| %>
+    17:         <tr>
+    18:             <td><%= article.id %></td>
+    19:             <td><%= article.title %></td>
+  
+app/views/articles/index.html.erb:16:in `_app_views_articles_index_html_erb__3162579696360394053_70234440238560'
+Started GET "/rails/info/routes" for 127.0.0.1 at 2019-04-23 12:21:39 +0530
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::InfoController#routes as HTML
+  Rendering /home/vijendra/.rvm/gems/ruby-2.4.1@5.1.4/gems/railties-5.1.6.2/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /home/vijendra/.rvm/gems/ruby-2.4.1@5.1.4/gems/actionpack-5.1.6.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [18 times] (27.2ms)
+  Rendered /home/vijendra/.rvm/gems/ruby-2.4.1@5.1.4/gems/actionpack-5.1.6.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (17.4ms)
+  Rendered /home/vijendra/.rvm/gems/ruby-2.4.1@5.1.4/gems/railties-5.1.6.2/lib/rails/templates/rails/info/routes.html.erb within layouts/application (55.4ms)
+Completed 200 OK in 118ms (Views: 77.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles?utf8=%E2%9C%93&search=ruby+on+rails&commit=search" for 127.0.0.1 at 2019-04-23 12:22:17 +0530
+Processing by ArticlesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"ruby on rails", "commit"=>"search"}
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."title" = ? LIMIT ?[0m  [["title", "ruby on rails"], ["LIMIT", 1]]
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (35.0ms)
+Completed 500 Internal Server Error in 120ms (ActiveRecord: 2.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"articles"}, missing required keys: [:id]):
+    1: <h2> Listing articles  ||  <%= link_to 'Add article', action: 'new' %> </h2>
+    2: 
+    3: <%= form_tag(article_path, method: :get) do %>
+    4:     <%= text_field_tag(:search , params[:search]) %>
+    5:     <%= submit_tag ("search") %>
+    6: <% end %>
+  
+app/views/articles/index.html.erb:3:in `_app_views_articles_index_html_erb__3404604231106576163_18879160'
+Started GET "/articles" for 127.0.0.1 at 2019-04-23 12:27:54 +0530
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (1.9ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/vijendra/Documents/intern/environment/blog/app/views/articles/index.html.erb:45: syntax error, unexpected keyword_ensure, expecting keyword_end
+          ensure
+                ^
+/home/vijendra/Documents/intern/environment/blog/app/views/articles/index.html.erb:47: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/views/articles/index.html.erb:45: syntax error, unexpected keyword_ensure, expecting keyword_end
+app/views/articles/index.html.erb:47: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/articles" for 127.0.0.1 at 2019-04-23 12:28:51 +0530
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (24.4ms)
+Completed 200 OK in 814ms (Views: 809.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles?utf8=%E2%9C%93&search=ruby+on+rails&commit=search" for 127.0.0.1 at 2019-04-23 12:29:00 +0530
+Processing by ArticlesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"ruby on rails", "commit"=>"search"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."title" = ? LIMIT ?[0m  [["title", "ruby on rails"], ["LIMIT", 1]]
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (16.7ms)
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    14:     </tr>
+    15:     <% if params[:search] %>
+    16:             <tr>
+    17:             <td><%= @article.id %></td>
+    18:             <td><%= @article.title %></td>
+    19:             <td><%= @article.text %></td>
+    20:             <td><%= link_to 'show', article_path(@article) %></td> 
+  
+app/views/articles/index.html.erb:17:in `_app_views_articles_index_html_erb__3404604231106576163_47244800'
+Started GET "/articles?utf8=%E2%9C%93&search=ruby+on+rails&commit=search" for 127.0.0.1 at 2019-04-23 12:30:33 +0530
+Processing by ArticlesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"ruby on rails", "commit"=>"search"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."title" = ? LIMIT ?[0m  [["title", "ruby on rails"], ["LIMIT", 1]]
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (18.2ms)
+Completed 500 Internal Server Error in 84ms (ActiveRecord: 12.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    14:     </tr>
+    15:     <% if params[:search] %>
+    16:             <tr>
+    17:             <td><%= @articles.id %></td>
+    18:             <td><%= @articles.title %></td>
+    19:             <td><%= @articles.text %></td>
+    20:             <td><%= link_to 'show', article_path(@articles) %></td> 
+  
+app/views/articles/index.html.erb:17:in `_app_views_articles_index_html_erb__3404604231106576163_42017300'
+Started GET "/articles" for 127.0.0.1 at 2019-04-23 12:30:49 +0530
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (22.7ms)
+Completed 200 OK in 98ms (Views: 94.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles?utf8=%E2%9C%93&search=ruby+on+rails&commit=search" for 127.0.0.1 at 2019-04-23 12:30:53 +0530
+Processing by ArticlesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"ruby on rails", "commit"=>"search"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."title" = ? LIMIT ?[0m  [["title", "ruby on rails"], ["LIMIT", 1]]
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (19.5ms)
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    14:     </tr>
+    15:     <% if params[:search] %>
+    16:             <tr>
+    17:             <td><%= @articles.id %></td>
+    18:             <td><%= @articles.title %></td>
+    19:             <td><%= @articles.text %></td>
+    20:             <td><%= link_to 'show', article_path(@articles) %></td> 
+  
+app/views/articles/index.html.erb:17:in `_app_views_articles_index_html_erb__3404604231106576163_69955253087420'
+Started GET "/articles" for 127.0.0.1 at 2019-04-23 12:31:31 +0530
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 103ms (Views: 100.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/articles?utf8=%E2%9C%93&search=ruby+on+rails&commit=search" for 127.0.0.1 at 2019-04-23 12:31:34 +0530
+Processing by ArticlesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"ruby on rails", "commit"=>"search"}
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."title" = ? LIMIT ?[0m  [["title", "ruby on rails"], ["LIMIT", 1]]
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (19.1ms)
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    15:     <% if params[:search] %>
+    16:             <tr>
+    17:            <td></td>
+    18:             <td><%= @articles.title %></td>
+    19:             <td><%= @articles.text %></td>
+    20:             <td><%= link_to 'show', article_path(@articles) %></td> 
+    21:             <td><%= link_to 'edit', edit_article_path(@articles) %></td> 
+  
+app/views/articles/index.html.erb:18:in `_app_views_articles_index_html_erb__3404604231106576163_43207080'
+Started GET "/articles" for 127.0.0.1 at 2019-04-23 12:32:06 +0530
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (19.0ms)
+Completed 200 OK in 95ms (Views: 90.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles?utf8=%E2%9C%93&search=ruby+on+rails&commit=search" for 127.0.0.1 at 2019-04-23 12:32:09 +0530
+Processing by ArticlesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"ruby on rails", "commit"=>"search"}
+  [1m[36mArticle Load (1.0ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."title" = ? LIMIT ?[0m  [["title", "ruby on rails"], ["LIMIT", 1]]
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (51720.6ms)
+Completed 500 Internal Server Error in 51740ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    16:             <tr>
+    17:            <td></td>
+    18:            <% byebug %>
+    19:             <td><%= @articles.title %></td>
+    20:             <td><%= @articles.text %></td>
+    21:             <td><%= link_to 'show', article_path(@articles) %></td> 
+    22:             <td><%= link_to 'edit', edit_article_path(@articles) %></td> 
+  
+app/views/articles/index.html.erb:19:in `_app_views_articles_index_html_erb__3404604231106576163_69955021189300'
+Started GET "/articles" for 127.0.0.1 at 2019-04-23 12:33:35 +0530
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (38.9ms)
+Completed 200 OK in 19310ms (Views: 126.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/articles?utf8=%E2%9C%93&search=ruby+on+rails&commit=search" for 127.0.0.1 at 2019-04-23 12:34:00 +0530
+Processing by ArticlesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"ruby on rails", "commit"=>"search"}
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."title" = ? LIMIT ?[0m  [["title", "ruby on rails"], ["LIMIT", 1]]
+  [1m[36mCACHE Article Load (0.6ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."title" = ? LIMIT ?[0m  [["title", "ruby on rails"], ["LIMIT", 1]]
+  Rendering articles/index.html.erb within layouts/application
+Started GET "/" for 127.0.0.1 at 2019-04-23 12:37:43 +0530
+  Rendered articles/index.html.erb within layouts/application (103318.8ms)
+Completed 500 Internal Server Error in 223133ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    16:             <tr>
+    17:            <td></td>
+    18:            <% byebug %>
+    19:             <td><%= @articles.title %></td>
+    20:             <td><%= @articles.text %></td>
+    21:             <td><%= link_to 'show', article_path(@articles) %></td> 
+    22:             <td><%= link_to 'edit', edit_article_path(@articles) %></td> 
+  
+app/views/articles/index.html.erb:19:in `_app_views_articles_index_html_erb__3404604231106576163_40435180'
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 95ms (Views: 89.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-04-23 12:37:50 +0530
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 80ms (Views: 76.4ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2019-04-23 12:37:53 +0530
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (43.3ms)
+Completed 200 OK in 139ms (Views: 120.5ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/articles?utf8=%E2%9C%93&search=ruby+on+rails&commit=search" for 127.0.0.1 at 2019-04-23 12:38:03 +0530
+Processing by ArticlesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"ruby on rails", "commit"=>"search"}
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."title" = ? LIMIT ?[0m  [["title", "ruby on rails"], ["LIMIT", 1]]
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (16616.0ms)
+Completed 200 OK in 16716ms (Views: 16705.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles?utf8=%E2%9C%93&search=ruby+on+rails&commit=search" for 127.0.0.1 at 2019-04-23 12:39:19 +0530
+Processing by ArticlesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"ruby on rails", "commit"=>"search"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."title" = ? LIMIT ?[0m  [["title", "ruby on rails"], ["LIMIT", 1]]
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 91ms (Views: 84.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2019-04-23 12:39:48 +0530
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (22.4ms)
+Completed 200 OK in 99ms (Views: 93.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/articles?utf8=%E2%9C%93&search=ruby+on+rails&commit=search" for 127.0.0.1 at 2019-04-23 12:39:54 +0530
+Processing by ArticlesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"ruby on rails", "commit"=>"search"}
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."title" = ? LIMIT ?[0m  [["title", "ruby on rails"], ["LIMIT", 1]]
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 101ms (Views: 95.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles?utf8=%E2%9C%93&search=NIT+T&commit=search" for 127.0.0.1 at 2019-04-23 12:40:08 +0530
+Processing by ArticlesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"NIT T", "commit"=>"search"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."title" = ? LIMIT ?[0m  [["title", "NIT T"], ["LIMIT", 1]]
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (13.7ms)
+Completed 200 OK in 117ms (Views: 108.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles?utf8=%E2%9C%93&search=ruby+on+rails&commit=search" for 127.0.0.1 at 2019-04-23 12:40:17 +0530
+Processing by ArticlesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"ruby on rails", "commit"=>"search"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."title" = ? LIMIT ?[0m  [["title", "ruby on rails"], ["LIMIT", 1]]
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 105ms (Views: 95.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles?utf8=%E2%9C%93&search=india&commit=search" for 127.0.0.1 at 2019-04-23 12:40:29 +0530
+Processing by ArticlesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"india", "commit"=>"search"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."title" = ? LIMIT ?[0m  [["title", "india"], ["LIMIT", 1]]
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  Rendered articles/index.html.erb within layouts/application (31.2ms)
+Completed 500 Internal Server Error in 53ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for #<Article::ActiveRecord_Relation:0x00000004e38678>
+Did you mean?  ids):
+    14:     </tr>
+    15:     <% if params[:search] %>
+    16:             <tr>
+    17:            <td><%= @articles.id%></td>
+    18:            
+    19:             <td><%= @articles.title %></td>
+    20:             <td><%= @articles.text %></td>
+  
+app/views/articles/index.html.erb:17:in `_app_views_articles_index_html_erb__3404604231106576163_40988020'
+Started GET "/articles?utf8=%E2%9C%93&search=india&commit=search" for 127.0.0.1 at 2019-04-23 12:41:41 +0530
+Processing by ArticlesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"india", "commit"=>"search"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."title" = ? LIMIT ?[0m  [["title", "india"], ["LIMIT", 1]]
+  Rendering articles/index.html.erb within layouts/application
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "articles"[0m
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (18.6ms)
+Completed 200 OK in 118ms (Views: 109.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/articles?utf8=%E2%9C%93&search=India&commit=search" for 127.0.0.1 at 2019-04-23 12:41:51 +0530
+Processing by ArticlesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"India", "commit"=>"search"}
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."title" = ? LIMIT ?[0m  [["title", "India"], ["LIMIT", 1]]
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (45.1ms)
+Completed 500 Internal Server Error in 64ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `count' for #<Article:0x007f3f582a2800>):
+    12:         <th>Text</th>
+    13:         <th></th>
+    14:     </tr>
+    15:     <% if @articles.count == 1 %>
+    16:             <tr>
+    17:            <td><%= @articles.id%></td>
+    18:            
+  
+app/views/articles/index.html.erb:15:in `_app_views_articles_index_html_erb__3404604231106576163_69955019409820'
+Started GET "/articles?utf8=%E2%9C%93&search=india&commit=search" for 127.0.0.1 at 2019-04-23 12:47:32 +0530
+Processing by ArticlesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"india", "commit"=>"search"}
+  [1m[36mArticle Load (2.8ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."title" = ? LIMIT ?[0m  [["title", "india"], ["LIMIT", 1]]
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (36.9ms)
+Completed 200 OK in 148ms (Views: 125.1ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/articles?utf8=%E2%9C%93&search=India&commit=search" for 127.0.0.1 at 2019-04-23 12:47:38 +0530
+Processing by ArticlesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"India", "commit"=>"search"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."title" = ? LIMIT ?[0m  [["title", "India"], ["LIMIT", 1]]
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 113ms (Views: 100.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2019-04-23 12:48:18 +0530
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (40.6ms)
+  Rendered articles/new.html.erb within layouts/application (45.1ms)
+Completed 200 OK in 129ms (Views: 127.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2019-04-23 12:48:21 +0530
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (21.2ms)
+Completed 200 OK in 103ms (Views: 99.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2019-04-23 12:48:26 +0530
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (20.9ms)
+Completed 200 OK in 101ms (Views: 97.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles?utf8=%E2%9C%93&search=vv&commit=search" for 127.0.0.1 at 2019-04-23 12:48:31 +0530
+Processing by ArticlesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"vv", "commit"=>"search"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."title" = ? LIMIT ?[0m  [["title", "vv"], ["LIMIT", 1]]
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (24.8ms)
+Completed 200 OK in 112ms (Views: 103.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/articles?utf8=%E2%9C%93&search=vijju&commit=search" for 127.0.0.1 at 2019-04-23 12:48:38 +0530
+Processing by ArticlesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"vijju", "commit"=>"search"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."title" = ? LIMIT ?[0m  [["title", "vijju"], ["LIMIT", 1]]
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 100ms (Views: 90.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles?utf8=%E2%9C%93&search=ruby+on+rails&commit=search" for 127.0.0.1 at 2019-04-23 12:48:51 +0530
+Processing by ArticlesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"ruby on rails", "commit"=>"search"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."title" = ? LIMIT ?[0m  [["title", "ruby on rails"], ["LIMIT", 1]]
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 125ms (Views: 118.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles/1" for 127.0.0.1 at 2019-04-23 12:49:13 +0530
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (1.4ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 1]]
+  Rendered collection of comments/_comment.html.erb [2 times] (17.7ms)
+  Rendered comments/_form.html.erb (13.3ms)
+  Rendered articles/show.html.erb within layouts/application (151.0ms)
+Completed 200 OK in 234ms (Views: 227.2ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2019-04-23 12:49:15 +0530
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (14.2ms)
+Completed 200 OK in 105ms (Views: 103.2ms | ActiveRecord: 0.3ms)
+
+

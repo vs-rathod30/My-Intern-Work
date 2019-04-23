@@ -4,17 +4,15 @@ class ArticlesController < ApplicationController
    before_action :show, only: [:download_pdf]
 
     def index
-        if params[:store]
-            @article = Article.find_by(title: "%#{params[:store]}")
-        else
-            @articles = Article.all
-        end
+        
+            @articles = Article.search(params[:search])
+
+            @ar = Article.all
+    
     end
 
     def show
-        if params[:store]
-            @article = Article.where(title: params[:store])
-        elsif params[:id]
+        if params[:id]
             @article = Article.find(params[:id])
         else
             @article = Article.find(params[:format])
@@ -71,7 +69,7 @@ class ArticlesController < ApplicationController
 
     private
       def article_params
-        params.require(:article).permit(:store, :title, :text)
+        params.require(:article).permit(:title, :text, :search)
       end
 
       def generate_pdf(article)
