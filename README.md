@@ -8,6 +8,9 @@ Date:
     To ---   21/04/2019
 
 # prerequisite:
+
+https://github.com/vs-rathod30/My-Intern-Work/blob/mixes/mixes/README.md
+
 ⦁	Web services
 
 ⦁	REST (REpresentational State Transfer)  /   SOAP 
@@ -54,7 +57,7 @@ Date:
 
 ⦁ MVC pattern  (Model-View-Controller)
 
-⦁ Ruby Object Model structure
+⦁ Ruby Object Model structure        https://github.com/vs-rathod30/My-Intern-Work/tree/mixes/mixes/ROM
 
 
 # Ruby Language :
@@ -64,19 +67,22 @@ Date:
 
 ⦁	Symbols / String
 
-⦁	Execeptions
+⦁	Execeptions     https://github.com/vs-rathod30/My-Intern-Work/tree/mixes/mixes/exception
 
-⦁	Module
-   
+⦁	Module      https://github.com/vs-rathod30/My-Intern-Work/tree/mixes/mixes/module
+		    https://github.com/vs-rathod30/My-Intern-Work/tree/mixes/mixes/shape
+
   	 ⦁ As namespace
    
   	 ⦁ As Mixin
 
-⦁ Blocks, Proc & Lambda
+⦁ Blocks, Proc & Lambda      https://github.com/vs-rathod30/My-Intern-Work/tree/mixes/mixes/proc
 
 ⦁ File I/O
 
 ⦁ OOP's Concept
+
+: metaprogramming        https://github.com/vs-rathod30/My-Intern-Work/tree/mixes/mixes/metaprogramming
 
 
 # Rails Framework :
@@ -143,3 +149,19 @@ Date:
         ⦁ has_many
         
         ⦁ has_and_belongs_to_many
+	
+# Mongoid     
+
+https://github.com/vs-rathod30/My-Intern-Work/tree/mongoid_blog
+	
+	- CRUD Operation
+	
+	Association
+		
+		- embeds_many
+		
+		- embeds_one
+		
+	Persistence Methods
+	
+	Query
