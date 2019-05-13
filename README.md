@@ -165,3 +165,8 @@ https://github.com/vs-rathod30/My-Intern-Work/tree/mongoid_blog
 	Persistence Methods
 	
 	Query
+
+
+# Reading Excel_Sheet
+ 
+   Using Roo gem
