@@ -23,7 +23,7 @@ module FileMigrationJobs
       iterate_share_holders_sheet(shareholder_file.sheet(Sheet))
       migrate_share_holding_patterns()
       share_holder_hash.clear
-      # FileUtils.rm params[:temp_file_name], force: true
+       FileUtils.rm params[:temp_file_name], force: true
     end
 
     private
@@ -79,11 +79,9 @@ module FileMigrationJobs
         shareholdingpattern = set_share_holding_pattern(key)
 
         value.each do |data|
-             #byebug
               instrument = set_instrument_details(data) if data[:type_of_shares]
               data.tap{|k| k.delete(:type_of_shares)} 
-        
-
+          
           shareholder = ShareHolder.new(data)
           shareholder.instrument_details << instrument if instrument
           shareholdingpattern.share_holders << shareholder
