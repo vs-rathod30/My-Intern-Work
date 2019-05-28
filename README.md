@@ -170,7 +170,5 @@ https://github.com/vs-rathod30/My-Intern-Work/tree/mongoid_blog
 # Reading Excel_Sheet
  
   Using Roo gem   
-  
-    	 for single file    https://github.com/vs-rathod30/My-Intern-Work/blob/master/share_holder_pattern_migration_job.rb
 	 
-	 for any file       https://github.com/vs-rathod30/My-Intern-Work/blob/master/share_holding_migration_job.rb
+        https://github.com/vs-rathod30/My-Intern-Work/blob/master/share_holding_migration_job.rb
