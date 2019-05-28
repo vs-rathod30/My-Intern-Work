@@ -172,3 +172,8 @@ https://github.com/vs-rathod30/My-Intern-Work/tree/mongoid_blog
   Using Roo gem   
 	 
         https://github.com/vs-rathod30/My-Intern-Work/blob/master/share_holding_migration_job.rb
+	
+	this template important for this
+	
+	
+	            https://github.com/vs-rathod30/My-Intern-Work/blob/master/Share_holding_patterns_templates_file.xlsx
