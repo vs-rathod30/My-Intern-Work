@@ -1,5 +1,6 @@
-module FileMigrationJobs
-  class ShareHoldingMigrationJob < FileMigrationJobs::GenericFileMigrationJob
+module Cra
+  module FileMigrationJobs
+   class ShareHoldingMigrationJob < FileMigrationJobs::GenericFileMigrationJob
     Sheet = "Shareholder"
 
     EXCEL_COLUMN_TO_MODEL_ATTRIBUTE_HASH = {"Shareholder Id" => :shareholder_id, "Shareholding Date" => :share_holding_date, "Shareholder type" => :share_holder_type,
@@ -31,12 +32,20 @@ module FileMigrationJobs
     def iterate_instrument_sheet(instrument_sheet)
       key_value = nil
       last_row_count = instrument_sheet.last_row
-      header_row = instrument_sheet.row(1)
+      header_row = nil
       it = 1
       while it < last_row_count
         it = it + 1
         current_row = instrument_sheet.row(it)
-        next if current_row.blank? || current_row[0].blank? || current_row[1].blank?
+        next if current_row.blank? || current_row[0].blank?
+        header_row = current_row
+        break
+      end
+
+      while it < last_row_count
+        it = it + 1
+        current_row = instrument_sheet.row(it)
+        next if current_row.blank? || current_row[0].blank?
         tmp = Hash.new
 
         current_row.each_with_index do |element, index|
@@ -63,7 +72,7 @@ module FileMigrationJobs
       while it < last_row_count
         it = it + 1
         current_row = shareholders_sheet.row(it)
-        next if current_row.blank? || current_row[0].blank? || current_row[1].blank?
+        next if current_row.blank? || current_row[0].blank?
             iterate_row_by_row_sheet(shareholders_sheet, it, current_row)
           return
       end
@@ -131,5 +140,6 @@ module FileMigrationJobs
       InstrumentDetail.new(instrument_detail)   
     end
 
+   end
   end
 end
